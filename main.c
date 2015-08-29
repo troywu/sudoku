@@ -86,16 +86,27 @@ int main (int argc, const char * argv[]) {
 		puts("\n\n  After row-singleton-detection...\n");
 		printFull();
 		printMatrix();
+
+		for ( int col = 0; col < 9; ++col ) {
+			struct entry **c = allocCol(col);
+			singletonDetection(c);
+			free(c);
+		}
 		
-//		for ( int col = 0; col < 9; ++col ) {
-//			struct entry **c = allocCol(col);
-//			singletonDetection(c);
-//			free(c);
-//		}
-//		
-//		puts("\n\n  After col-singleton-detection...\n");
-//		printFull();
-//		printMatrix();
+		puts("\n\n  After col-singleton-detection...\n");
+		printFull();
+		printMatrix();
+        
+        for ( int row = 0; row < 9; ++row ) {
+            for ( int col = 0; col < 9; ++col ) {
+                struct entry *e = G(row, col);
+                checkIfEntrySolved(e);
+            }
+        }
+        
+        puts("\n\n  After entry-singleton-detection...\n");
+        printFull();
+        printMatrix();
 		
 //		for ( int row = 0; row < 9; row += 3 ) {
 //			for ( int col = 0; col < 9; col += 3 ) {

@@ -268,7 +268,7 @@ void neighRowDetection ( struct entry **n ) {
 			struct entry **r = allocRow(row);
 			for ( int i = 0; i < 9; ++i ) {
 				int matches = 0;
-				for ( int j = 0; j < 9;+ ++j ) {
+				for ( int j = 0; j < 9; ++j ) {
 					if ( r[i] == n[j] ) {
 						matches = 1;
 						break;
@@ -338,6 +338,28 @@ void similarityReduction ( struct entry **n ) {
 	}
 }
 
+void printSingleEntry ( struct entry *e ) {
+    printf("is: %d\n", e->is);
+    printf("(row, col): (%d, %d)\n", e->row, e->col);
+    printf("%d %d %d\n", e->vals[0], e->vals[1], e->vals[2]);
+    printf("%d %d %d\n", e->vals[3], e->vals[4], e->vals[5]);
+    printf("%d %d %d\n", e->vals[6], e->vals[7], e->vals[8]);
+}
+
+void checkIfEntrySolved ( struct entry *e ) {
+    //printSingleEntry(e);
+    
+    int targetIndex = -1;
+    int legalValuesLeft = 0;
+    if ( 1 == S(e) ) {
+        int idx = -1;
+        for ( idx = 0; idx < 9; ++idx ) {
+            if ( e->vals[idx] ) break;
+        }
+        set(e, 1+idx);
+    }
+}
+
 int verifySolution() {
 	for ( int idx = 0; idx < 9; ++idx ) {
 		struct entry **r = allocRow(idx);
@@ -365,7 +387,7 @@ int verifySolution() {
 			for ( int i = 0; i < 8; ++i ) {
 				int nis = n[i]->is;
 				for ( int j = i+1; j < 9; ++j ) {
-					if ( (n[j]->is == nis) ) {
+					if ( n[j]->is == nis ) {
 						printf("  Solution does not verify (neighborhood[%d,%d] violation).\n", row, col);
 						return 1;
 					}
