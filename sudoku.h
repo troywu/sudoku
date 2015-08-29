@@ -51,3 +51,6 @@ int verifySolution(void);
 void neighRowDetection ( struct entry ** );
 void singletonDetection ( struct entry ** );
 void similarityReduction ( struct entry ** );
+
+void printSingleEntry ( struct entry * );
+void checkIfEntrySolved ( struct entry * );
