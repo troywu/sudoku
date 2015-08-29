@@ -176,7 +176,7 @@ int main (int argc, const char * argv[]) {
 		 */
 		
 		empties = check();
-		printf("\n  ==> %d empties after %d iterations...\n\n  ", empties, iter);
+		printf("\n  ==> %d empties after %d iterations...\n\n", empties, iter);
 		
 		if ( 0 == empties ) {
 			printFull();
