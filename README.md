@@ -1,7 +1,7 @@
 Simple Sudoku Solver
 =
 
-Many, many years ago, I was sitting on a plane, next to someone struggling to do
+Many, many years ago, I was seated on a plane next to someone struggling to do
 the sudoku in the airline magazine. Not only was that irritating on its own, but
 the dude was writing in the damn magazine. Dude, that's not cool. Anyway, it
 irritated me enough to make me wonder if I could write a program to solve all
