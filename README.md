@@ -5,8 +5,14 @@ Many, many years ago, I was sitting on a plane, next to someone struggling to do
 the sudoku in the airline magazine. Not only was that irritating on its own, but
 the dude was writing in the damn magazine. Dude, that's not cool. Anyway, it
 irritated me enough to make me wonder if I could write a program to solve all
-sudoku puzzles (or at least some very large subset of them) before he could
-solve just the one.
+sudoku puzzles (or at least some very large subset of them) before:
+
+1) we landed, and
+2) before he could solve just the one.
+
+He quit the puzzle (*dude*) before I finished, but he knew what I was doing, and
+was irritated when he saw my program solved it. I asked the stewardess for some
+more newspapers or magazines, and it solved those, too.
 
 *\[I don't remember which flight or even which airline, but the puzzle below is
 the one printed in that magazine.\]*
