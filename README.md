@@ -109,6 +109,6 @@ represents a single cell in the puzzle, and the possible values. In the example,
 1, 4, and 9 are possible values for that square.
 
 The process just iterates through its relatively simple heuristics until the
-puzzle is solved--or no more progress is made.
+puzzle is solved--or no more progress can be made.
 
 That's it!
