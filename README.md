@@ -19,7 +19,7 @@ the one printed in that magazine.\]*
 
 This is a simple heuristic sudoku solver. It can solve trivial sudoku
 puzzles--that's probably most puzzles sold at newspaper stands marked 'easy'
-through 'hard'--. If it can't solve the puzzle, it will fill in what it knows to
+through 'hard'. If it can't solve the puzzle, it will fill in what it knows to
 be true, and leaves the rest as an exercise to the reader.
 
 Compiling
